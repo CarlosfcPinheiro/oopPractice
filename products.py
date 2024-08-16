@@ -8,12 +8,16 @@ class Product:
 # Derived/Child class ================
 class Ball(Product):
     def __init__(self, quantity:int, price:float, color:str) -> None:
-        # To give the access to change the parent __init__ method
+        # To give the access to change the parent __init__ method / To save lines of code
         super().__init__(quantity, price)
         self.color = color
 
 class Scratcher(Product):
-    pass
+    def __init__(self, quantity: int, price: float, height:float) -> None:
+        super().__init__(quantity, price)
+        self.height = height
 
-class Portion(Product):
-    pass
+class AnimalFood(Product):
+    def __init__(self, quantity: int, price: float, premium: bool) -> None:
+        super().__init__(quantity, price)
+        self.premium = premium

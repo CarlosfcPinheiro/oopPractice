@@ -5,6 +5,10 @@ class Animal:
         self.name = name
         self.age = age
         self.breed = breed
+
+    def changeName(self):
+        newName = str(input('Enter a new name: ')).title().strip()
+        self.name = newName
     
     def eat(self):
         return print(f"{self.name} thinks it's delicious!")
